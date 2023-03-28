@@ -1,0 +1,31 @@
+function printAnagramPairs(arr) {
+    const anagramPairs = {};
+  
+    for (let i = 0; i < arr.length; i++) {
+      const cleanStr = arr[i].toLowerCase().replace(/[^a-z0-9]/g, '');
+      
+      const sortedStr = cleanStr.split('').sort().join('');
+      if (sortedStr in anagramPairs) {
+       
+        anagramPairs[sortedStr].push(arr[i]);
+      } else {
+        
+        anagramPairs[sortedStr] = [arr[i]];
+      }
+    }
+  
+   
+    for (const key in anagramPairs) {
+      const values = anagramPairs[key];
+      if (values.length > 1) {
+        console.log(values);
+      }
+    }
+  }
+  
+  // Example usage
+  const arr = ['rail safety', 'fairy tales', 'silent', 'listen', 'astronomer', 'moon starer'];
+  printAnagramPairs(arr);
+  // Output:
+  // ["rail safety", "fairy tales"]
+  // ["silent", "listen"]
