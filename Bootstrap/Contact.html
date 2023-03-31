@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Tourism Site</title>
+  <style>
+    body {
+   background: radial-gradient(rgb(250, 247, 240), rgb(241, 241, 235));
+   text-align: center;
+   font-size: 1rem;
+   position: relative;
+ }
+</style>
+</head>
+<body>
+  <h1>Contact Us</h1>
+  
+  <h2>Address</h2>
+  <p>345 Main Town<br>
+  Manali, India</p>
+
+  <h2>Phone</h2>
+  <p>(555) 123-4567</p>
+
+  <h2>Email</h2>
+  <p><a href="mailto:info@tourismsite.com">info@tourismsite.com</a></p>
+
+  <h2>Contact Form</h2>
+  <form action="submit-form.php" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+    
+    <input type="submit" value="Send">
+  </form>
+</body>
+</html>
